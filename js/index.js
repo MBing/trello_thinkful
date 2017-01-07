@@ -3,6 +3,6 @@ require('babel-polyfill');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Board from './components/board';
+import Main from './components/main';
 
-ReactDOM.render(<Board />, document.getElementById('app'));
+ReactDOM.render(<Main />, document.getElementById('app'));
