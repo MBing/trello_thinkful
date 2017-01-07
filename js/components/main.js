@@ -4,7 +4,17 @@ import Board from './board';
 import Card from './card';
 import List from './list';
 
+
 export default class Main extends Component {
+  onAddInputChanged() {
+    console.log('changed form input');
+  }
+
+  onAddSubmit(event) {
+    event.preventDefault();
+    console.log('submit form');
+  }
+
   render() {
     let cards = [
       <Card cardText="Some Text here for card 1"/>,
@@ -19,8 +29,8 @@ export default class Main extends Component {
     ];
 
     let lists = [
-      <List listTitle="Development" cards={cards} />,
-      <List listTitle="Design" cards={cards2} />,
+      <List listTitle="Development" cards={cards} onAddInputChanged={this.onAddInputChanged} onAddSubmit={this.onAddSubmit} />,
+      <List listTitle="Design" cards={cards2} onAddInputChanged={this.onAddInputChanged} onAddSubmit={this.onAddSubmit} />,
     ];
 
     return (
