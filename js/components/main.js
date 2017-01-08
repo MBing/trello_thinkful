@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Board from './board';
 import Card from './card';
-import List from './list';
+import ListContainer from './list-container';
 
 
 export default class Main extends Component {
@@ -29,8 +29,16 @@ export default class Main extends Component {
     ];
 
     let lists = [
-      <List listTitle="Development" cards={cards} onAddInputChanged={this.onAddInputChanged} onAddSubmit={this.onAddSubmit} />,
-      <List listTitle="Design" cards={cards2} onAddInputChanged={this.onAddInputChanged} onAddSubmit={this.onAddSubmit} />,
+      <ListContainer
+        listTitle="Development"
+        cards={cards}
+        onAddInputChanged={this.onAddInputChanged}
+        onAddSubmit={this.onAddSubmit} />,
+      <ListContainer
+        listTitle="Design"
+        cards={cards2}
+        onAddInputChanged={this.onAddInputChanged}
+        onAddSubmit={this.onAddSubmit} />,
     ];
 
     return (
